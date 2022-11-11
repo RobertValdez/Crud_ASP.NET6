@@ -1,0 +1,44 @@
+﻿@model List<Article>
+
+    <h1>Artículos</h1>
+
+    <p>
+        <a asp-action="Create">Crear</a>
+    </p>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+
+                    Nombre
+                </th>
+                <th>
+                    Marca
+
+                </th>
+
+            </tr>
+
+
+
+        </thead>
+        <tbody>
+        @foreach (var article in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(m => article.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(m => article.Brand.Name)
+                </td>
+                <td>
+                    
+                </td>
+            </tr>
+        }
+        </tbody>
+
+
+    </table>
